@@ -27,7 +27,10 @@ export default function Post({
         className={`aspect-h-1 aspect-w-1 lg:aspect-none h-60 overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80 `}
       >
         <img
-          src={image}
+          src={
+            image ||
+            'https://th.bing.com/th/id/OIP.gV1cXI_SNBK_nU1yrE_hcwHaGp?rs=1&pid=ImgDetMain'
+          }
           alt={`Front of ${title} in black.`}
           className="h-full w-full object-cover object-center lg:h-full lg:w-full"
         />
