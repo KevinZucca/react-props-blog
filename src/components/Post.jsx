@@ -6,6 +6,21 @@ export default function Post({
   tags,
   published = 'false',
 }) {
+  const colors = {
+    modern: 'bg-blue-500',
+    art: 'bg-red-400',
+    design: 'bg-yellow-300',
+    furniture: 'bg-pink-500',
+    decor: 'bg-green-500',
+    home: 'bg-purple-500',
+    lighting: 'bg-orange-200',
+    sculpture: 'bg-purple-200',
+    industrial: 'bg-blue-200',
+    rustic: 'bg-brown-500',
+    scandinavian: 'bg-azure-500',
+    vase: 'bg-gray-300',
+  };
+
   return (
     <>
       <div
@@ -30,7 +45,7 @@ export default function Post({
             {tags.map((tag) => (
               <p
                 key={Date.now()}
-                className="mt-1 rounded-full border p-2 px-2 text-center text-sm text-gray-700"
+                className={`mt-1 rounded-full border p-2 px-2 text-center text-sm text-gray-700 ${colors[tag]}`}
               >
                 {tag}
               </p>
